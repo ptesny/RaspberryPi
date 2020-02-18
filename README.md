@@ -21,6 +21,10 @@ $ sudo pip install docker-compose --ignore-installed PyYAML
 
 [cli](https://github.com/mmb/cf-cli-pi)
 
+## cf multiapps plugin
+
+https://github.com/cloudfoundry-incubator/multiapps-cli-plugin/releases/tag/v2.2.1
+
 ## installing tools java jdk and npm
 
 [java](https://linuxize.com/post/install-java-on-raspberry-pi/)
