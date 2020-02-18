@@ -34,7 +34,8 @@ https://github.com/cloudfoundry-incubator/multiapps-cli-plugin/releases/tag/v2.2
 
 ## golang
 
-download the latestt version from https://dl.google.com/go/go1.13.3.linux-armv6l.tar.gz
+https://alexatnet.com/install-go-on-raspberry-pi/. 
+download the latest version from https://dl.google.com/go/go1.13.3.linux-armv6l.tar.gz
 
 ```
 $ wget https://storage.googleapis.com/golang/go1.8.3.linux-armv6l.tar.gz
