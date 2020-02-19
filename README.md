@@ -120,7 +120,115 @@ pi@phoscon:~ $
 if you need to install the multiapps plugin you may need to recompile the plugin source code accordingly:
 https://github.com/golang/go/wiki/GoArm
 
-Goto https://github.com/cloudfoundry-incubator/multiapps-cli-plugin
+  * Goto https://github.com/cloudfoundry-incubator/multiapps-cli-plugin
+  * Clone the github reposiitory (for instance under your home directory)
+
+```
+pi@phoscon:~ $ pwd
+/home/pi
+pi@phoscon:~ $ mkdir -p go/src/github.com/cloudfoundry-incubator
+pi@phoscon:~ $ cd go/src/github.com/cloudfoundry-incubator
+pi@phoscon:~/go/src/github.com/cloudfoundry-incubator $ 
+pi@phoscon:~/go/src/github.com/cloudfoundry-incubator $ git clone https://github.com/cloudfoundry-incubator/multiapps-cli-plugin.git
+Cloning into 'multiapps-cli-plugin'...
+remote: Enumerating objects: 60, done.
+remote: Counting objects: 100% (60/60), done.
+remote: Compressing objects: 100% (52/52), done.
+remote: Total 2430 (delta 16), reused 24 (delta 8), pack-reused 2370
+Receiving objects: 100% (2430/2430), 101.79 MiB | 350.00 KiB/s, done.
+Resolving deltas: 100% (1248/1248), done.
+Checking out files: 100% (914/914), done.
+
+```
+
+### Build new release version using the provided build.sh script
+
+Please make sure you build for linux 32-bit arm architecture
+
+```
+pi@phoscon:~/go/src/github.com/cloudfoundry-incubator/multiapps-cli-plugin $ cp build.sh build.sh.orig
+pi@phoscon:~/go/src/github.com/cloudfoundry-incubator/multiapps-cli-plugin $ 
+pi@phoscon:~/go/src/github.com/cloudfoundry-incubator/multiapps-cli-plugin $ nano build.sh 
+
+```
+
+
+```
+pi@phoscon:~/go/src/github.com/cloudfoundry-incubator $ ls -alrt
+total 12
+drwxr-xr-x  3 pi pi 4096 Feb 18 23:03 ..
+drwxr-xr-x  3 pi pi 4096 Feb 18 23:05 .
+drwxr-xr-x 20 pi pi 4096 Feb 18 23:10 multiapps-cli-plugin
+pi@phoscon:~/go/src/github.com/cloudfoundry-incubator $ cd multiapps-cli-plugin/
+pi@phoscon:~/go/src/github.com/cloudfoundry-incubator/multiapps-cli-plugin $ ./build.sh 2.2.1
++++ realpath -- ./build.sh
+++ dirname -- /home/pi/go/src/github.com/cloudfoundry-incubator/multiapps-cli-plugin/build.sh
++ script_dir=/home/pi/go/src/github.com/cloudfoundry-incubator/multiapps-cli-plugin
++ cd /home/pi/go/src/github.com/cloudfoundry-incubator/multiapps-cli-plugin
++ cd /home/pi/go/src/github.com/cloudfoundry-incubator/multiapps-cli-plugin
++ BUILD_FOLDER=build
++ PLUGIN_NAME_WIN_32=multiapps-plugin.win32
++ PLUGIN_NAME_WIN_64=multiapps-plugin.win64
++ PLUGIN_NAME_LINUX_32=multiapps-plugin.linux32
++ PLUGIN_NAME_LINUX_64=multiapps-plugin.linux64
++ PLUGIN_NAME_OSX=multiapps-plugin.osx
++ OLD_PLUGIN_NAME_WIN_64=mta_plugin_windows_amd64.exe
++ OLD_PLUGIN_NAME_LINUX_64=mta_plugin_linux_amd64
++ OLD_PLUGIN_NAME_OSX=mta_plugin_darwin_amd64
++ PLUGIN_NAME_STATIC_WIN_32=multiapps-plugin-static.win32
++ PLUGIN_NAME_STATIC_WIN_64=multiapps-plugin-static.win64
++ PLUGIN_NAME_STATIC_LINUX_32=multiapps-plugin-static.linux32
++ PLUGIN_NAME_STATIC_LINUX_64=multiapps-plugin-static.linux64
++ PLUGIN_NAME_STATIC_OSX=multiapps-plugin-static.osx
++ OLD_PLUGIN_NAME_STATIC_WIN_64=mta_plugin_static_windows_amd64.exe
++ OLD_PLUGIN_NAME_STATIC_LINUX_64=mta_plugin_static_linux_amd64
++ OLD_PLUGIN_NAME_STATIC_OSX=mta_plugin_static_darwin_amd64
++ version=2.2.1
++ build 2.2.1 linux arm multiapps-plugin.linux32
++ local version=2.2.1
++ local platform=linux
++ local arch=arm
++ local plugin_name=multiapps-plugin.linux32
++ echo calling to build for linux arm
+calling to build for linux arm
++ GOOS=linux
++ GOARCH=arm
++ go build -ldflags '-X main.Version=2.2.1' -o multiapps-plugin.linux32
++ buildstatic 2.2.1 linux arm multiapps-plugin-static.linux32
++ local version=2.2.1
++ local platform=linux
++ local arch=arm
++ local plugin_name=multiapps-plugin-static.linux32
++ echo calling to build static for linux arm
+calling to build static for linux arm
++ CGO_ENABLED=0
++ GOOS=linux
++ GOARCH=arm
++ go build -a -tags netgo -ldflags '-w -extldflags "-static" -X main.Version=2.2.1' -o multiapps-plugin-static.linux32
++ mkdir build -p
++ createBuildMetadataFiles 2.2.1 build
++ local version=2.2.1
++ local folder=build
++ echo -n v2.2.1
++ grep -Pzoa '(?s)## v2.2.1(.*?)##' CHANGELOG.md
++ grep -va '##'
++ tr -s '\n' '\n'
++ movePluginsToBuildFolder build
++ local folder=build
+
+```
+
+
+### installing the multiapps plugin
+
+```
+pi@phoscon:~/go/src/github.com/cloudfoundry-incubator/multiapps-cli-plugin/build $ cf install-plugin multiapps-plugin.linux32 -f
+Attention: Plugins are binaries written by potentially untrusted authors.
+Install and use plugins at your own risk.
+Installing plugin multiapps...
+OK
+Plugin multiapps 2.2.1 successfully installed.
+```
 
 
 ## ngdbc
