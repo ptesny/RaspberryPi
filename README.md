@@ -218,6 +218,29 @@ calling to build static for linux arm
 
 ```
 
+```
+pi@phoscon:~/spring-music/spring-music $ cf apps
+Getting apps in org haa / space haa as piotr.tesny@sap.com...
+OK
+
+name                                                 requested state   instances   memory   disk   urls
+shine-core-js                                        started           1/1         152M     1G     haa-haa-shine-core-js.cfapps.eu10.hana.ondemand.com
+myapp                                                stopped           0/1         600M     1G     myapp-busy-baboon.cfapps.eu10.hana.ondemand.com
+shine-core-db                                        stopped           0/1         244M     1G
+shine-core-db2                                       stopped           0/1         244M     1G
+shine-user-js                                        started           1/1         256M     1G     haa-haa-shine-user-js.cfapps.eu10.hana.ondemand.com
+shine-web                                            started           1/1         128M     1G     haa-haa-shine-web.cfapps.eu10.hana.ondemand.com
+spring-music-news                                    started           1/1         128M     1G     haa-haa-spring-music-news.cfapps.eu10.hana.ondemand.com
+spring-music-web                                     started           0/1         1G       1G     haa-haa-spring-music-web.cfapps.eu10.hana.ondemand.com
+shine-user-db2                                       stopped           0/1         244M     1G
+site-content                                         stopped           0/1         308M     1G
+site-web                                             stopped           0/1         256M     1G     haa-haa-site-web.cfapps.eu10.hana.ondemand.com
+hdispacedeployc0b35b23-a772-4632-a000-272da94b0abe   stopped           0/1         1G       1G     hdispacedeployc0b35b23-a772-4632-a000-272da94b0abe.cfapps.eu10.hana.ondemand.com
+haa-java                                             started           1/1         800M     1G     haa-haa-haa-java.cfapps.eu10.hana.ondemand.com
+haa-approuter                                        started           1/1         128M     1G     haa-haa-haa-approuter.cfapps.eu10.hana.ondemand.com
+pi@phoscon:~/spring-music/spring-music $ 
+
+```
 
 ### installing the multiapps plugin
 
