@@ -34,7 +34,7 @@ https://github.com/cloudfoundry-incubator/multiapps-cli-plugin/releases/tag/v2.2
 
 ## golang
 
-https://alexatnet.com/install-go-on-raspberry-pi/. 
+https://alexatnet.com/install-go-on-raspberry-pi/  
 download the latest version from https://dl.google.com/go/go1.13.3.linux-armv6l.tar.gz
 
 ```
@@ -114,6 +114,15 @@ Setting up golang (2:1.11~1+b6) ...
 Processing triggers for man-db (2.8.5-2) ...
 pi@phoscon:~ $ 
 ```
+
+### GO development
+
+if you need to install the multiapps plugin you may need to recompile the plugin source code accordingly:
+https://github.com/golang/go/wiki/GoArm
+
+Goto https://github.com/cloudfoundry-incubator/multiapps-cli-plugin
+
+
 ## ngdbc
 
 ```
