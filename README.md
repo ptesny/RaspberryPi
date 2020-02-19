@@ -230,6 +230,38 @@ OK
 Plugin multiapps 2.2.1 successfully installed.
 ```
 
+## cf deploy
+
+```
+pi@phoscon:~ $ pwd
+/home/pi
+pi@phoscon:~ $ mkdir spring-music
+pi@phoscon:~ $ cd spring-music/
+pi@phoscon:~/spring-music $ git clone https://github.com/nvvalchev/spring-music.git
+Cloning into 'spring-music'...
+remote: Enumerating objects: 1144, done.
+remote: Total 1144 (delta 0), reused 0 (delta 0), pack-reused 1144
+Receiving objects: 100% (1144/1144), 93.85 MiB | 1.20 MiB/s, done.
+Resolving deltas: 100% (388/388), done.
+
+pi@phoscon:~/spring-music $ 
+pi@phoscon:~/spring-music $ cd spring-music/
+pi@phoscon:~/spring-music/spring-music $ cf deploy mta-assembly/spring-music.mtar -e config.mtaext
+Deploying multi-target app archive mta-assembly/spring-music.mtar in org haa / space haa as piotr.tesny@sap.com...
+
+Uploading 1 files...
+  /home/pi/spring-music/spring-music/mta-assembly/spring-music.mtar
+OK
+Uploading 1 files...
+  /home/pi/spring-music/spring-music/config.mtaext
+OK
+Deploying in org "haa" and space "haa"
+Detected MTA schema version: "3"
+No deployed MTA detected - this is initial deployment
+Detected new MTA version: "1.0.0"
+Processing service "spring-music-db"...
+
+```
 
 ## ngdbc
 
