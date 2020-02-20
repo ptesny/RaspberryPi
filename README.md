@@ -157,7 +157,7 @@ pi@phoscon:~/go/src/github.com/cloudfoundry-incubator/multiapps-cli-plugin $ nan
 
 make the following changes in the *build.sh* script, namely:
 
-````
+```
 version=$(<cfg/VERSION)
 build $version linux arm $PLUGIN_NAME_LINUX_32
 
