@@ -36,7 +36,9 @@ https://plugins.cloudfoundry.org/
 
 ## golang
 
+https://github.com/golang/go/wiki/GoArm  
 https://alexatnet.com/install-go-on-raspberry-pi/  
+
 download the latest version from https://dl.google.com/go/go1.13.3.linux-armv6l.tar.gz
 
 ```
