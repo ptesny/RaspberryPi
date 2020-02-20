@@ -1,4 +1,4 @@
-# RaspberryPi for _plumbers_ and DIY cloud foundry developers
+# RaspberryPi for ioT and cloud foundry developers
 RaspberryPi tools for running docker images and CloudFoundry operations
 
 Raspbian (aka arm debian) [documentation](https://www.raspberrypi.org/documentation/raspbian/)  
