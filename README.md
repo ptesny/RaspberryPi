@@ -33,8 +33,9 @@ $ sudo pip install docker-compose --ignore-installed PyYAML
 
 ## cf MTA
 
-Parsers, validators, persistence and utilities for Multi-Target Application (MTA) models.
-https://github.com/cloudfoundry-incubator/multiapps
+Parsers, validators, persistence and utilities for Multi-Target Application (MTA) models:
+  * https://github.com/cloudfoundry-incubator/multiapps
+  * https://blogs.sap.com/2018/02/05/building-multi-target-applications-mta-for-cloud-foundry-using-your-favorite-ide/
 
 
 ## cf multiapps plugin
