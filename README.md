@@ -531,7 +531,9 @@ You must specify a file to convert.
 
 ## Install jq on Raspberry Pi
 
-https://www.trevland.org/install-jq-raspberry-pi/
+### method
+  * a. https://stedolan.github.io/jq/download/
+  * b. https://www.trevland.org/install-jq-raspberry-pi/
 
 ```
 wget https://github.com/stedolan/jq/releases/download/jq-1.5/jq-1.5.tar.gz
