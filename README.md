@@ -224,7 +224,7 @@ calling to build static for linux arm
 
 ```
 pi@phoscon:~/spring-music/spring-music $ cf apps
-Getting apps in org haa / space haa as piotr.tesny@sap.com...
+Getting apps in org haa / space haa as xxxxxx...
 OK
 
 name                                                 requested state   instances   memory   disk   urls
