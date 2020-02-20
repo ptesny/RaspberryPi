@@ -529,3 +529,94 @@ You must specify a file to convert.
 
 ```
 
+## Install jq on Raspberry Pi
+
+
+```
+wget https://github.com/stedolan/jq/releases/download/jq-1.5/jq-1.5.tar.gz
+tar xfvz jq-1.5.tar.gz
+cd jq-1.5
+./configure && make && sudo make install
+```
+
+
+```
+pi@phoscon:~ $ cd Downloads/
+pi@phoscon:~/Downloads $ wget https://github.com/stedolan/jq/releases/download/jq-1.5/jq-1.5.tar.gz
+--2020-02-20 13:34:24--  https://github.com/stedolan/jq/releases/download/jq-1.5/jq-1.5.tar.gz
+Resolving github.com (github.com)... 140.82.118.4
+Connecting to github.com (github.com)|140.82.118.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-production-release-asset-2e65be.s3.amazonaws.com/5101141/f8d0df1e-439f-11e5-980c-9c1e050ee63f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20200220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200220T133424Z&X-Amz-Expires=300&X-Amz-Signature=719ab802f8a2a636045df9a25ccf78a5d747c1fc490faf5f303aa7706b9d7f61&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Djq-1.5.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2020-02-20 13:34:24--  https://github-production-release-asset-2e65be.s3.amazonaws.com/5101141/f8d0df1e-439f-11e5-980c-9c1e050ee63f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20200220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200220T133424Z&X-Amz-Expires=300&X-Amz-Signature=719ab802f8a2a636045df9a25ccf78a5d747c1fc490faf5f303aa7706b9d7f61&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Djq-1.5.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-production-release-asset-2e65be.s3.amazonaws.com (github-production-release-asset-2e65be.s3.amazonaws.com)... 52.216.96.195
+Connecting to github-production-release-asset-2e65be.s3.amazonaws.com (github-production-release-asset-2e65be.s3.amazonaws.com)|52.216.96.195|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 739309 (722K) [application/octet-stream]
+Saving to: ‘jq-1.5.tar.gz’
+
+jq-1.5.tar.gz                                          100%[===========================================================================================================================>] 721.98K   664KB/s    in 1.1s    
+
+2020-02-20 13:34:26 (664 KB/s) - ‘jq-1.5.tar.gz’ saved [739309/739309]
+
+pi@phoscon:~/Downloads $ tar xfvz jq-1.5.tar.gz
+jq-1.5/
+
+pi@phoscon:~/Downloads/jq-1.5 $ ./configure && make && sudo make install
+
+ /usr/bin/mkdir -p '/usr/local/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libjq.la '/usr/local/lib'
+libtool: install: /usr/bin/install -c .libs/libjq.so.1.0.4 /usr/local/lib/libjq.so.1.0.4
+libtool: install: (cd /usr/local/lib && { ln -s -f libjq.so.1.0.4 libjq.so.1 || { rm -f libjq.so.1 && ln -s libjq.so.1.0.4 libjq.so.1; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f libjq.so.1.0.4 libjq.so || { rm -f libjq.so && ln -s libjq.so.1.0.4 libjq.so; }; })
+libtool: install: /usr/bin/install -c .libs/libjq.lai /usr/local/lib/libjq.la
+libtool: install: /usr/bin/install -c .libs/libjq.a /usr/local/lib/libjq.a
+libtool: install: chmod 644 /usr/local/lib/libjq.a
+libtool: install: ranlib /usr/local/lib/libjq.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/usr/local/bin'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c jq '/usr/local/bin'
+libtool: install: /usr/bin/install -c jq /usr/local/bin/jq
+ /usr/bin/mkdir -p '/usr/local/share/doc/jq'
+ /usr/bin/install -c -m 644 README.md COPYING AUTHORS README '/usr/local/share/doc/jq'
+ /usr/bin/mkdir -p '/usr/local/include'
+ /usr/bin/install -c -m 644 jv.h jq.h '/usr/local/include'
+ /usr/bin/mkdir -p '/usr/local/share/man/man1'
+ /usr/bin/install -c -m 644 jq.1 '/usr/local/share/man/man1'
+make[2]: Leaving directory '/home/pi/Downloads/jq-1.5'
+make[1]: Leaving directory '/home/pi/Downloads/jq-1.5'
+pi@phoscon:~/Downloads/jq-1.5 $ jq
+jq - commandline JSON processor [version 1.5]
+Usage: jq [options] <jq filter> [file...]
+
+	jq is a tool for processing JSON inputs, applying the
+	given filter to its JSON text inputs and producing the
+	filter's results as JSON on standard output.
+	The simplest filter is ., which is the identity filter,
+	copying jq's input to its output unmodified (except for
+	formatting).
+	For more advanced filters see the jq(1) manpage ("man jq")
+	and/or https://stedolan.github.io/jq
+
+.........................
+
+
+```
