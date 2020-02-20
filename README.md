@@ -987,3 +987,9 @@ OS name: "linux", version: "4.19.75-v7l+", arch: "arm", family: "unix"
 pi@phoscon:~/Downloads $ 
 
 ```
+
+
+# Additional resources
+
+https://www.cloudfoundry.org/blog/baking-clouds-experiment-raspberry-pi-bosh-cloud-foundry/
+
