@@ -24,7 +24,8 @@ $ sudo pip install docker-compose --ignore-installed PyYAML
 ## cf multiapps plugin
 
 https://github.com/cloudfoundry-incubator/multiapps-cli-plugin  
-https://github.com/cloudfoundry-incubator/multiapps-cli-plugin/releases/tag/v2.2.1
+https://github.com/cloudfoundry-incubator/multiapps-cli-plugin/releases/tag/v2.2.1  
+https://plugins.cloudfoundry.org/
 
 ## installing tools java jdk and npm
 
