@@ -28,7 +28,8 @@ $ sudo pip install docker-compose --ignore-installed PyYAML
 
 
 ## installing Node.js and npm on Raspberry Pi
-[npm](https://linuxize.com/post/how-to-install-node-js-on-raspberry-pi/)
+
+[nodejs && npm](https://linuxize.com/post/how-to-install-node-js-on-raspberry-pi/)
 
 ```
 $ curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
