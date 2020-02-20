@@ -22,14 +22,98 @@ $ sudo pip install docker-compose --ignore-installed PyYAML
 
 # Building multi-target applications (MTA) for Cloud Foundry using your RaspberryPi
 
-## installing tools java jdk and npm
+## installing java jdk on Raspberry Pi
 
 [java](https://linuxize.com/post/install-java-on-raspberry-pi/)
 
+
+## installing Node.js and npm on Raspberry Pi
 [npm](https://linuxize.com/post/how-to-install-node-js-on-raspberry-pi/)
 
+```
+$ curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+
+## Installing the NodeSource Node.js 10.x repo...
 
 
+## Populating apt-get cache...
+
++ apt-get update
+Get:1 http://archive.raspberrypi.org/debian buster InRelease [25.1 kB]
+Get:2 http://raspbian.raspberrypi.org/raspbian buster InRelease [15.0 kB]                                                                                                                      
+Hit:3 http://phoscon.de/apt/deconz buster-beta InRelease                                                                                                                                                   
+Hit:4 https://download.docker.com/linux/raspbian buster InRelease                                                                                                                                          
+Get:6 http://archive.raspberrypi.org/debian buster/main armhf Packages [277 kB]    
+Hit:5 https://cf-cli-debian-repo.s3.amazonaws.com stable InRelease                                  
+Fetched 317 kB in 2s (183 kB/s)
+Reading package lists... Done
+
+## Confirming "buster" is supported...
+
++ curl -sLf -o /dev/null 'https://deb.nodesource.com/node_10.x/dists/buster/Release'
+
+## Adding the NodeSource signing key to your keyring...
+
++ curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+OK
+
+## Creating apt sources list file for the NodeSource Node.js 10.x repo...
+
++ echo 'deb https://deb.nodesource.com/node_10.x buster main' > /etc/apt/sources.list.d/nodesource.list
++ echo 'deb-src https://deb.nodesource.com/node_10.x buster main' >> /etc/apt/sources.list.d/nodesource.list
+
+## Running `apt-get update` for you...
+
++ apt-get update
+Hit:1 http://phoscon.de/apt/deconz buster-beta InRelease
+Hit:2 http://raspbian.raspberrypi.org/raspbian buster InRelease                                                                                                                                            
+Hit:3 http://archive.raspberrypi.org/debian buster InRelease                                                                                                                                               
+Hit:4 https://download.docker.com/linux/raspbian buster InRelease                                                                                                                    
+Get:5 https://deb.nodesource.com/node_10.x buster InRelease [4,584 B]                                                                                          
+Hit:6 https://cf-cli-debian-repo.s3.amazonaws.com stable InRelease                           
+Get:7 https://deb.nodesource.com/node_10.x buster/main armhf Packages [766 B]
+Fetched 5,350 B in 2s (2,864 B/s)
+Reading package lists... Done
+
+## Run `sudo apt-get install -y nodejs` to install Node.js 10.x and npm
+## You may also need development tools to build native addons:
+     sudo apt-get install gcc g++ make
+## To install the Yarn package manager, run:
+     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt-get update && sudo apt-get install yarn
+
+
+```
+
+install nodejs itself
+
+
+```
+$ sudo apt-get install -y nodejs
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libjs-sphinxdoc libjs-underscore python-dbus python-secretstorage
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  nodejs
+0 upgraded, 1 newly installed, 0 to remove and 127 not upgraded.
+Need to get 14.6 MB of archives.
+After this operation, 77.3 MB of additional disk space will be used.
+Get:1 https://deb.nodesource.com/node_10.x buster/main armhf nodejs armhf 10.19.0-1nodesource1 [14.6 MB]
+Fetched 14.6 MB in 24s (614 kB/s)                                                                                                                                                                                         
+Selecting previously unselected package nodejs.
+(Reading database ... 147973 files and directories currently installed.)
+Preparing to unpack .../nodejs_10.19.0-1nodesource1_armhf.deb ...
+Unpacking nodejs (10.19.0-1nodesource1) ...
+Setting up nodejs (10.19.0-1nodesource1) ...
+Processing triggers for man-db (2.8.5-2) ...
+pi@phoscon:~ $ node --version
+v10.19.0
+
+```
 ## cf command line
 
 [cli](https://github.com/mmb/cf-cli-pi)
