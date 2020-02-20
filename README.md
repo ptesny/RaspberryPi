@@ -153,6 +153,15 @@ Please make sure you build for linux 32-bit arm architecture
 pi@phoscon:~/go/src/github.com/cloudfoundry-incubator/multiapps-cli-plugin $ cp build.sh build.sh.orig
 pi@phoscon:~/go/src/github.com/cloudfoundry-incubator/multiapps-cli-plugin $ 
 pi@phoscon:~/go/src/github.com/cloudfoundry-incubator/multiapps-cli-plugin $ nano build.sh 
+```
+
+make the following changes in the *build.sh* script, namely:
+
+````
+version=$(<cfg/VERSION)
+build $version linux arm $PLUGIN_NAME_LINUX_32
+
+buildstatic $version linux arm $PLUGIN_NAME_STATIC_LINUX_32
 
 ```
 
