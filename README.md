@@ -533,6 +533,57 @@ You must specify a file to convert.
 
 ### method
   * a. https://stedolan.github.io/jq/download/
+  
+```
+$ sudo apt-get install jq
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libjs-sphinxdoc libjs-underscore python-dbus python-secretstorage
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libjq1 libonig5
+The following NEW packages will be installed:
+  jq libjq1 libonig5
+0 upgraded, 3 newly installed, 0 to remove and 127 not upgraded.
+Need to get 329 kB of archives.
+After this operation, 982 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://mirror.chaoticum.net/rpi/raspbian buster/main armhf libonig5 armhf 6.9.1-1 [150 kB]
+Get:2 http://mirror.chaoticum.net/rpi/raspbian buster/main armhf libjq1 armhf 1.5+dfsg-2+b1 [119 kB]
+Get:3 http://mirror.chaoticum.net/rpi/raspbian buster/main armhf jq armhf 1.5+dfsg-2+b1 [59.3 kB]
+Fetched 329 kB in 1s (411 kB/s)
+Selecting previously unselected package libonig5:armhf.
+(Reading database ... 162266 files and directories currently installed.)
+Preparing to unpack .../libonig5_6.9.1-1_armhf.deb ...
+Unpacking libonig5:armhf (6.9.1-1) ...
+Selecting previously unselected package libjq1:armhf.
+Preparing to unpack .../libjq1_1.5+dfsg-2+b1_armhf.deb ...
+Unpacking libjq1:armhf (1.5+dfsg-2+b1) ...
+Selecting previously unselected package jq.
+Preparing to unpack .../jq_1.5+dfsg-2+b1_armhf.deb ...
+Unpacking jq (1.5+dfsg-2+b1) ...
+Setting up libonig5:armhf (6.9.1-1) ...
+Setting up libjq1:armhf (1.5+dfsg-2+b1) ...
+Setting up jq (1.5+dfsg-2+b1) ...
+Processing triggers for man-db (2.8.5-2) ...
+Processing triggers for libc-bin (2.28-10+rpi1) ...
+pi@phoscon:~/Downloads $ jq
+jq - commandline JSON processor [version 1.5]
+Usage: jq [options] <jq filter> [file...]
+
+	jq is a tool for processing JSON inputs, applying the
+	given filter to its JSON text inputs and producing the
+	filter's results as JSON on standard output.
+	The simplest filter is ., which is the identity filter,
+	copying jq's input to its output unmodified (except for
+	formatting).
+	For more advanced filters see the jq(1) manpage ("man jq")
+	and/or https://stedolan.github.io/jq
+
+```
+
   * b. https://www.trevland.org/install-jq-raspberry-pi/
 
 ```
