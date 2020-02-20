@@ -142,3 +142,24 @@ A shortcut should also now be available in your desktop menus (depending on your
 pi@phoscon:~/vstudio $ code-oss
 
 ```
+
+using the X11 terminal on macOS
+
+```
+$ ssh -Y pi@192.168.2.2
+$ code-oss
+```
+
+here go the vscode credentials:
+
+```
+Version: 1.43.0 (user setup)
+Commit: 6ec6f9e3f4d17f0cef0480688a1f350b9141e567
+Date: 2020-02-17T06:26:19.948Z
+Electron: 7.1.11
+Chrome: 78.0.3904.130
+Node.js: 12.8.1
+V8: 7.8.279.23-electron.0
+OS: Linux arm 4.19.75-v7l+
+```
+
