@@ -31,10 +31,17 @@ $ sudo pip install docker-compose --ignore-installed PyYAML
 
 [cli](https://github.com/mmb/cf-cli-pi)
 
+## cf MTA
+
+Parsers, validators, persistence and utilities for Multi-Target Application (MTA) models.
+https://github.com/cloudfoundry-incubator/multiapps
+
+
 ## cf multiapps plugin
 
-https://github.com/cloudfoundry-incubator/multiapps-cli-plugin  
-https://github.com/cloudfoundry-incubator/multiapps-cli-plugin/releases/tag/v2.2.1  
+A CLI plugin for Multi-Target Application (MTA) operations in Cloud Foundry:
+  * https://github.com/cloudfoundry-incubator/multiapps-cli-plugin  
+  * https://github.com/cloudfoundry-incubator/multiapps-cli-plugin/releases/tag/v2.2.1  
 https://plugins.cloudfoundry.org/
 
 ## golang
