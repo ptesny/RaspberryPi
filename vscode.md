@@ -143,7 +143,7 @@ pi@phoscon:~/vstudio $ code-oss
 
 ```
 
-using the X11 terminal on macOS
+using the X11 (XQuartz) terminal on macOS
 
 ```
 $ ssh -Y pi@192.168.2.2
