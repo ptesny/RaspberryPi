@@ -115,9 +115,17 @@ pi@phoscon:~ $ node --version
 v10.19.0
 
 ```
-## cf command line
+## Cloud Foundry CLI binaries for Raspberry Pi
 
 [cli](https://github.com/mmb/cf-cli-pi)
+
+Get the latest binary from:
+
+https://cf-cli-pi.s3.amazonaws.com/index.html
+
+put it somewhere in your path (like `/usr/local/bin`) and `chmod +x` it.
+
+Here goes the cf cli official client [repo](https://github.com/cloudfoundry/cli)
 
 ## cf MTA
 
