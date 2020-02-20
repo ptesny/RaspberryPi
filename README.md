@@ -1,5 +1,5 @@
 # RaspberryPi
-RaspberryPi tools
+RaspberryPi tools for running docker images and CloudFoundry operations
 
 
 ## install docker
@@ -17,6 +17,13 @@ or alternatively
 $ sudo pip install docker-compose --ignore-installed PyYAML
 ```
 
+## installing tools java jdk and npm
+
+[java](https://linuxize.com/post/install-java-on-raspberry-pi/)
+
+[npm](https://linuxize.com/post/how-to-install-node-js-on-raspberry-pi/)
+
+
 ## cf command line
 
 [cli](https://github.com/mmb/cf-cli-pi)
@@ -26,12 +33,6 @@ $ sudo pip install docker-compose --ignore-installed PyYAML
 https://github.com/cloudfoundry-incubator/multiapps-cli-plugin  
 https://github.com/cloudfoundry-incubator/multiapps-cli-plugin/releases/tag/v2.2.1  
 https://plugins.cloudfoundry.org/
-
-## installing tools java jdk and npm
-
-[java](https://linuxize.com/post/install-java-on-raspberry-pi/)
-
-[npm](https://linuxize.com/post/how-to-install-node-js-on-raspberry-pi/)
 
 ## golang
 
