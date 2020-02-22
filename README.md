@@ -8,6 +8,35 @@ Raspbian [remote](https://www.raspberrypi.org/documentation/remote-access/ssh/un
 
 [Update deCONZ manually](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually)
 
+## forward deCONZ to X11 client running on macOS
+
+if one does not want to use VNC and use macOS laptop to view the deCONZ application than the following steps needs to be taken: 
+
+  * check if deCONZ iis running
+```
+$ ps ax | grep deCONZ
+  346 ?        Ss     0:03 /bin/bash /usr/bin/deCONZ-update2.sh
+  352 ?        Ss     0:14 /bin/bash /usr/bin/deCONZ-WIFI2.sh
+ 1199 ?        Ssl    1:10 /usr/bin/deCONZ --http-port=80
+31967 pts/0    S+     0:00 grep --color=auto deCONZ
+```
+
+  * killall deCONZ
+
+```
+$ sudo killall deCONZ
+
+$ ps ax | grep deCONZ
+  346 ?        Ss     0:04 /bin/bash /usr/bin/deCONZ-update2.sh
+  352 ?        Ss     0:14 /bin/bash /usr/bin/deCONZ-WIFI2.sh
+32255 pts/0    S+     0:00 grep --color=auto deCONZ
+```
+
+  * forward deCONZ to X11 client (for instance on macOS)
+```  
+$ /usr/bin/deCONZ
+libpng warning: iCCP: known incorrect sRGB profile
+```
 
 ## install docker
 
