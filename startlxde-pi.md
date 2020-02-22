@@ -44,7 +44,7 @@ exit
 
 ```
 
-### running startlxde-pi as root user (not recommended)
+### running startlxde-pi as root user (not recommended) 
 
 ```
 pi@phoscon:~ $ xauth list $DISPLAY
@@ -56,6 +56,18 @@ root@phoscon:/home/pi# startlxde-pi
 ** Message: 18:34:09.287: main.vala:102: DE is LXDE
 ** Message: 18:34:09.492: main.vala:133: log directory: /root/.cache/lxsession/LXDE-pi
 ** Message: 18:34:09.492: main.vala:134: log path: /root/.cache/lxsession/LXDE-pi/run.log
+
+```
+
+and then run it as a normal user `pi@phoscon`
+
+```
+pi@phoscon:~ $ startlxde-pi
+** Message: 18:40:25.771: main.vala:101: Session is LXDE-pi
+** Message: 18:40:25.771: main.vala:102: DE is LXDE
+** Message: 18:40:25.941: main.vala:133: log directory: /home/pi/.cache/lxsession/LXDE-pi
+** Message: 18:40:25.941: main.vala:134: log path: /home/pi/.cache/lxsession/LXDE-pi/run.log
+
 
 ```
 
