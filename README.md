@@ -4,6 +4,10 @@ RaspberryPi tools for running docker images and CloudFoundry operations
 Raspbian (aka arm debian) [documentation](https://www.raspberrypi.org/documentation/raspbian/)  
 Raspbian [remote](https://www.raspberrypi.org/documentation/remote-access/ssh/unix.md) access.
 
+## install deCONZ manually
+
+[Update deCONZ manually](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/Update-deCONZ-manually)
+
 
 ## install docker
 
@@ -18,6 +22,45 @@ $ sudo apt-get remove python-configparser (apparently this isn't installed by us
 $ sudo pip install docker-compose 
 or alternatively
 $ sudo pip install docker-compose --ignore-installed PyYAML
+```
+
+list all dangling docker images
+
+```
+$ docker images --filter "dangling=true" -q --no-trunc
+sha256:9b88b51c66007dd3c77d64187897d62807c5615d4920dade8c4cb0c451ea5a95
+```
+
+remove all dangling docker images
+
+
+```
+$ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+
+Deleted: sha256:9b88b51c66007dd3c77d64187897d62807c5615d4920dade8c4cb0c451ea5a95
+Deleted: sha256:16ded40a6ef65e04dd91a966a0e8e9ceb231a5fd41d6ec6f676a729c87cf2e02
+Deleted: sha256:069b882009bc84ed96770fb22fdc49c4d9bcb234ef128a5461b362be696af34a
+Deleted: sha256:795fa9f3ad167d3a03f3ed75af56d196d096b6bdb41ab96ea9ec364a453e5e40
+Deleted: sha256:b1edcf34af2aa4ffa893adb8c48a17d72bb8df19b4ea769f3fabd726814d4a17
+Deleted: sha256:6dfbd3768f7170199eb4366be85bf49796c9d36be3589f5c78ee655a4d2e9e37
+Deleted: sha256:88c88793a99a9f1ca0b560a43ea1af60e90f292cdd1427c37cd6d08a3f4289f3
+Deleted: sha256:519d1960dc04b74cdcfa2eea52c3974b666869d224dad090d489e97d74e802fa
+Deleted: sha256:1cba1ecb649eb85b7cae1ac1a59403f7c9fdd7334f5f5ee3fa726f4c853337e4
+Deleted: sha256:b80389c3d487a4f08095ef79f15db1ab917e3c22d07282b061b8ae7611901205
+Deleted: sha256:727cc1161345a67ec07887b6b6128d39b0b6dfcc5e2fb978f87f17857d7b07b8
+Deleted: sha256:63b7087923321c4a6bc80fedb34418937e1284bb816b54d9f84d442bdecdb0b8
+Deleted: sha256:71761b5154ed8842a17ef7cdfa20b4387caa93bb7e12aa6362883247c4f8595c
+Deleted: sha256:04f66a669ba789281c08cde3770491dbca96410a3e9782bfb803db31f502f40f
+Deleted: sha256:2a2b99be8f8fabeec211f15c9cb9d8429eec81d1ba11668a1a91aa2111cd2542
+Deleted: sha256:a7a26ba898ace498647c891f646e41c0d4bcc632af96825272b8e248801967e6
+
+$ docker images -a
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+marthoc/deconz      latest              a617c51f1c27        7 weeks ago         230MB
+arm32v7/jetty       latest              eea2dba1b53e        9 months ago        383MB
+jetty               9.4.18-jre11        3931c46ad067        9 months ago        409MB
+arm32v7/openjdk     latest              98b26c25fd7f        13 months ago       688MB
+bobrik/socat        latest              e617a56c238e        4 years ago         6.95MB
 ```
 
 # Building multi-target applications (MTA) for Cloud Foundry using your RaspberryPi
