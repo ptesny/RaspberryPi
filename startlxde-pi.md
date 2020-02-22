@@ -43,4 +43,18 @@ root@phoscon:/home/pi# exit
 exit
 
 ```
+
+```
+pi@phoscon:~ $ xauth list $DISPLAY
+phoscon/unix:10  MIT-MAGIC-COOKIE-1  84b79b42b73c0b4b9df5ce036bf380d0
+pi@phoscon:~ $ sudo su
+root@phoscon:/home/pi# xauth add phoscon/unix:10  MIT-MAGIC-COOKIE-1  84b79b42b73c0b4b9df5ce036bf380d0
+root@phoscon:/home/pi# startlxde-pi
+** Message: 18:34:09.287: main.vala:101: Session is LXDE-pi
+** Message: 18:34:09.287: main.vala:102: DE is LXDE
+** Message: 18:34:09.492: main.vala:133: log directory: /root/.cache/lxsession/LXDE-pi
+** Message: 18:34:09.492: main.vala:134: log path: /root/.cache/lxsession/LXDE-pi/run.log
+
+```
+
 https://raspberrypi.stackexchange.com/questions/1719/x11-connection-rejected-because-of-wrong-authentication/4618
