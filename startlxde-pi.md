@@ -44,6 +44,8 @@ exit
 
 ```
 
+### running startlxde-pi as root user (not recommended)
+
 ```
 pi@phoscon:~ $ xauth list $DISPLAY
 phoscon/unix:10  MIT-MAGIC-COOKIE-1  84b79b42b73c0b4b9df5ce036bf380d0
