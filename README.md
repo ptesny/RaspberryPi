@@ -1036,3 +1036,30 @@ pi@phoscon:~/Downloads $
 
 https://www.cloudfoundry.org/blog/baking-clouds-experiment-raspberry-pi-bosh-cloud-foundry/
 
+https://hub.docker.com/r/marthoc/deconz
+
+https://build.opensuse.org/package/view_file/home:smarty12:home-assistant/deConz/deconz.spec?expand=0
+
+https://github.com/dresden-elektronik/deconz-rest-plugin/issues/1930  
+https://github.com/dresden-elektronik/deconz-rest-plugin#headless-support-for-linux  
+
+check if deCONZ is running:
+
+```
+$ ps ax | grep deCONZ
+  346 ?        Ss     0:01 /bin/bash /usr/bin/deCONZ-update2.sh
+  352 ?        Ss     0:06 /bin/bash /usr/bin/deCONZ-WIFI2.sh
+ 1199 ?        Ssl    0:31 /usr/bin/deCONZ --http-port=80
+15176 pts/0    S+     0:00 grep --color=auto deCONZ
+
+```
+
+
+headless deCONZ:
+
+```
+sudo killall deCONZ
+sudo systemctl disable deconz-gui
+sudo systemctl stop deconz-gui
+sudo systemctl restart deconz
+```
