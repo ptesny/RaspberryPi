@@ -1040,6 +1040,8 @@ https://hub.docker.com/r/marthoc/deconz
 
 https://build.opensuse.org/package/view_file/home:smarty12:home-assistant/deConz/deconz.spec?expand=0
 
+### The deCONZ package contains a systemd script, which allows deCONZ to run without a X11 server.
+
 https://github.com/dresden-elektronik/deconz-rest-plugin/issues/1930  
 https://github.com/dresden-elektronik/deconz-rest-plugin#headless-support-for-linux  
 
