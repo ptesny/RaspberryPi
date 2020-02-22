@@ -38,6 +38,9 @@ $ /usr/bin/deCONZ
 libpng warning: iCCP: known incorrect sRGB profile
 ```
 
+![deconz](images/deconz1.png)
+
+
 ## install docker
 
 [install docker](https://dev.to/rohansawant/installing-docker-and-docker-compose-on-the-raspberry-pi-in-5-simple-steps-3mgl)
