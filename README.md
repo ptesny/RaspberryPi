@@ -1044,6 +1044,7 @@ https://build.opensuse.org/package/view_file/home:smarty12:home-assistant/deConz
 
 https://github.com/dresden-elektronik/deconz-rest-plugin/issues/1930  
 https://github.com/dresden-elektronik/deconz-rest-plugin#headless-support-for-linux  
+https://dresden-elektronik.github.io/deconz-rest-doc  
 
 check if deCONZ is running:
 
