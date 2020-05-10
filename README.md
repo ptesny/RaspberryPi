@@ -39,7 +39,22 @@ libpng warning: iCCP: known incorrect sRGB profile
 ```
 
 ![deconz](images/deconz1.png)
-  
+
+## remove deCONZ
+
+https://github.com/dresden-elektronik/deconz-rest-plugin/issues/768
+
+  * Uninstall deCONZ dev version: `sudo apt remove deconz-dev -y`
+  * Uninstall deCONZ: `sudo apt remove deconz`
+  * Remove common files: `sudo rm -rf /usr/share/deCONZ/`
+  * Remove user files: `sudo rm -rf ~/.local/share/dresden-elektronik`
+  * Reinstall deCONZ dev version: `sudo apt install deconz -y`
+
+Or do all of this in one command:
+
+```
+sudo apt remove deconz-dev -y && sudo apt remove deconz -y && rm -rf /usr/share/deCONZ/ && sudo rm -rf ~/.local/share/dresden-elektronik && sudo apt install deconz -y
+```
 
 ## install docker
 
